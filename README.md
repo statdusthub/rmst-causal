@@ -157,8 +157,12 @@ ones.
 The median pseudo-value is 1834 days, slightly above τ. Pseudo-values are
 jackknife-derived quantities rather than observed survival times, so they are
 not bounded by τ, and the adequacy of the linear outcome model remains
-uncertain. The Kaplan-Meier-based pseudo-values also rely on assumptions about
-the censoring mechanism, which were not verified in this observational dataset.
+uncertain. The pseudo-values are based on a single pooled Kaplan-Meier
+estimator, which is justified when censoring is independent of event time,
+treatment, and covariates. Censoring that is independent of event time only
+conditional on treatment or covariates does not generally guarantee the
+validity of pooled Kaplan-Meier pseudo-values and may bias all three
+estimators. This assumption was not verified in this observational dataset.
 
 Overall, these data do not give a stable estimate: results depend on the
 estimator and the specification, and the DR interval includes zero. Unmeasured
